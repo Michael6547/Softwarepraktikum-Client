@@ -1,0 +1,64 @@
+
+.base-container {
+    position: relative;
+    width: 35px;
+    height: 35px;
+    background: black;
+    background-size: cover;
+}
+.base-container div{
+    position: absolute;
+    top: 27px;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: yellow url("../../views/images/apollo.png") no-repeat;
+    animation-name: turning-gif;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    background-size: cover;
+
+    animation-delay: 2s;
+}
+@keyframes turning-gif {
+    0%{
+        animation: circle;
+        transform: rotate(0);
+        left:0;
+        top:0;
+        opacity: 0;
+        width: 200%;
+        height: 200%;
+    }
+    25%{
+        left:100px;
+        top:100px;
+        opacity: 0.25;
+        width: 150%;
+        height: 150%;
+    }
+    50%{
+        left:200px;
+        top:;
+        opacity: 0.5;
+        width: 175%;
+        height: 175%;
+    }
+    75%{
+        left:100px;
+        top:-100px;
+        opacity: 1;
+        width: 200%;
+        height: 200%;
+    }
+
+    100%{
+        transform: rotate(360deg);
+        left:0;
+        top:0;
+        opacity: 0;
+        width: 75%;
+        height: 75%;
+
+    }
+}
